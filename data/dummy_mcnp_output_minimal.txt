@@ -1,0 +1,6 @@
+
+mcnp   6    06/02/25 19:00:00    1        100000      12345
+Problem Title: Test_Minimal_Tally
+tally   999
+# No et or vals, or incomplete
+    

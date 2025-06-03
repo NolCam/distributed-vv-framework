@@ -1,0 +1,43 @@
+
+mcnp   6    06/02/25 19:00:00    1        100000      12345
+Problem Title: Test_Multi_Tally
+
+tally   115               -1   1   0
+ et      4
+   0.0E+00  1.0E-03  2.0E-03  3.0E-03
+ vals
+   1.0E-05 0.10  2.0E-05 0.05
+   3.0E-05 0.02
+   # Total for Tally 115
+   6.0E-05 0.01 
+ tfc     blah
+
+tally   125               -1   1   0
+ description for 125
+ et      3
+   0.0E+00  0.5E-03  1.0E-03
+ vals
+   5.0E-06 0.20
+   7.0E-06 0.15
+   # Total for Tally 125
+   1.2E-05 0.03
+ tfc     blah blah
+
+tally   31  # An F1 type tally (often no energy bins, just total)
+ vals
+   1.234E-02 0.0050
+ tfc blah
+
+tally 41 # Another F1 type, but let's give it energy bins this time for testing structure
+ et 2
+  1.0e-2 2.0e-2
+ vals
+  9.0e-3 0.11
+  # No explicit total line, just one bin value
+ tfc end of 41
+
+tally 50 # Tally with no vals, only et
+ et 3
+  1.0 2.0 3.0
+ tfc something
+    
